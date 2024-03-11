@@ -1,0 +1,12 @@
+const photo = (event) => {
+    const imageFiles = event.target.files;
+    const imageFilesLength = imageFiles.length;
+    if (imageFilesLength > 0) {
+        const imageSrc = URL.createObjectURL(imageFiles[0]);
+        const imagePreviewElement = document.querySelector("#text1-");
+        imagePreviewElement.src = imageSrc;
+        imagePreviewElement.style.display = "block";
+    }
+    document.getElementById('text').style.display="none";
+    console.log(imageFiles)
+}
